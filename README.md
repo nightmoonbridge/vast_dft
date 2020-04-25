@@ -8,4 +8,4 @@ Since the room impulse responses (RIRs) used in the manuscript is not able to be
 
 
 ## How to start
-Load `journal_experiment_reproducibility.m`.
+Load `journal_github_reproducibility_vast_dft.m`.
