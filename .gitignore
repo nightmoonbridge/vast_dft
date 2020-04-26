@@ -3,7 +3,7 @@
 
 ### dev chosen ###
 *.gif
-*.mat
+#*.mat
 *.zip
 *.doc
 *.pptx
