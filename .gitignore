@@ -1,0 +1,53 @@
+ Windows default autosave extension
+*.asv
+
+### dev chosen ###
+*.gif
+*.mat
+*.zip
+*.doc
+*.pptx
+*.ppt
+*.docx
+*.wav
+*.jon
+*.csv
+
+# OSX / *nix default autosave extension
+*.m~
+
+# Compiled MEX binaries (all platforms)
+*.mex*
+
+# Packaged app and toolbox files
+*.mlappinstall
+*.mltbx
+
+# Generated helpsearch folders
+helpsearch*/
+
+# Simulink code generation folders
+slprj/
+sccprj/
+
+# Matlab code generation folders
+codegen/
+
+# Simulink autosave extension
+*.autosave
+
+# Simulink cache files
+*.slxc
+
+# Octave session info
+octave-workspace
+
+### specific files ###
+# example: foldername/filename.zip
+# supfolder/subfolder/*.*
+#asample/*
+#data/*
+#tmp_chks/*
+
+#fvast_labmeeting_15Nov2019.mlx
+#fvast_labmeeting_29Nov2019.mlx
