@@ -123,9 +123,9 @@ bgc = [1,1,1,0.8];
 % Note ------------------------------------------------------------------ %
 % In this section, the results of the experiments in 
 %   Sec. V-B Trade-off oAC and SDE
-%   Sec. V-C Performance with respect to the two user parameters
+%   Sec. V-D Performance with respect to the two user parameters
 % are shown.
-% Therefore, Figs. 5, 6, and 7 will be plotted.
+% Therefore, Figs. 5, 6, and 8 will be plotted.
 % ------------------------------------------------------------------ Note %
 close all
 exp1_ctrfilt = ctrfilt{general.idx.vast_nf};
@@ -140,12 +140,12 @@ calculatefVAST(general, array, zone, exp1_ctrfilt, mrirs, drirs, [], 'narrow', e
 %%
 % Note ------------------------------------------------------------------ %
 % In this section, the results of the experiments in 
-%   Sec. V-D Performance comparison between VAST-NF and VAST-BF
+%   Sec. V-E Performance comparison between VAST-NF and VAST-BF
 % are shown.
 %
 % This experiment shows the difference between VAST-NF and VAST-BF.
 % oAC, nSDE, and nRE for zone alpha and zone beta are plotted.
-% Figs. 8 (a)-(c) can be found from the results in the upper panel
+% Figs. 9 (d)-(f) can be found from the results in the upper panel
 % in the following figures.
 % ------------------------------------------------------------------ Note %
 
@@ -174,9 +174,9 @@ end
 close all
 general.legendnames = {'VAST-NF', 'VAST-BF'}';
 
-% Fig. 8 (a)
+% Fig. 9 (d)
 labels_oac.titletext = ['oAC_muNF_' num2str(exp2nre_ctrfilt{1}.mu) '_BF_' num2str(exp2nre_ctrfilt{2}.mu) '_Vquarter_nSd' num2str(tdB) 'dB'];
-str1 = [str_ref(:)', {[str_ref1 '8 (a).']}];
+str1 = [str_ref(:)', {[str_ref1 '9 (d).']}];
 labels_oac.tightfig = true;
 oac_all = cell(general.nmethods,1);
 oac_all{1} = exp2_pfm_vast_nf.postAC;
@@ -184,9 +184,9 @@ oac_all{2} = exp2_pfm_vast_bf.postAC;
 pmtplot_all(general, oac_all, [], labels_oac)
 text(110,27,str1,'BackgroundColor',bgc)
 
-% Fig. 8 (b)
+% Fig. 9 (e)
 labels_nsde.titletext = ['nSDE_muNF_' num2str(exp2nre_ctrfilt{1}.mu) '_BF_' num2str(exp2nre_ctrfilt{2}.mu) '_Vquarter_nSd' num2str(tdB) 'dB'];
-str1 = [str_ref(:)', {[str_ref1 '8 (b).']}];
+str1 = [str_ref(:)', {[str_ref1 '9 (e).']}];
 labels_nsde.tightfig = true;
 nsde_all = cell(general.nmethods,1);
 nsde_all{1} = exp2_pfm_vast_nf.nsde;
@@ -195,9 +195,9 @@ pmtplot_all(general, nsde_all, [], labels_nsde)
 text(110,4,str1,'BackgroundColor',bgc)
 
 
-% Fig. 8 (c)
+% Fig. 9 (f)
 labels_nre.titletext = ['nRE_muNF_' num2str(exp2nre_ctrfilt{1}.mu) '_BF_' num2str(exp2nre_ctrfilt{2}.mu) '_Vquarter_nSd' num2str(tdB) 'dB'];
-str1 = [str_ref(:)', {[str_ref1 '8 (c).']}];
+str1 = [str_ref(:)', {[str_ref1 '9 (f).']}];
 labels_nre.tightfig = true;
 nre_all = cell(general.nmethods,1);
 nre_all{1} = exp2_pfm_vast_nf.nre;
@@ -209,11 +209,13 @@ text(110,-24,str1,'BackgroundColor',bgc)
 %%
 % Note ------------------------------------------------------------------ %
 % In this section, the results of the experiments in 
-%   Sec. V-D Performance comparison between VAST-NF and VAST-BF
+%   Sec. V-E Performance comparison between VAST-NF and VAST-BF
 % are shown.
 %
 % This experiment shows the cost functions of VAST-NF and VAST-BF.
-% Fig. 9 will be plotted.
+% Fig. 11 will be plotted.
+% It should be noted that this section takes time to compute and plot the
+% results compared to the other sections.
 % ------------------------------------------------------------------ Note %
 
 % mu = 1, a fixed value
@@ -305,8 +307,8 @@ end
 close all
 
 
-str1 = [str_ref(:)', {[str_ref1 '9.']}];
-% Fig. 9
+str1 = [str_ref(:)', {[str_ref1 '11.']}];
+% Fig. 11
 figure('Name', 'costfunction_vs_subspacerank__vast__nf_bf')
 plot(can_V,10*log10(costfunction_vs_subspacerank_muopt),'Marker','*')
 hold on
@@ -331,7 +333,7 @@ text(150,10,str1,'BackgroundColor',bgc)
 %
 % This experiment shows the filter coefficient at the 8th loudspeaker by
 % the three different methods.
-% Fig. 10 will be plotted.
+% Fig. 12 will be plotted.
 % ------------------------------------------------------------------ Note %
 general.legendnames = {'VAST-NF', 'VAST-BF', 'VAST-T'}';
 
@@ -391,8 +393,8 @@ array.virsrcpos = 8;
 linidx = (array.virsrcpos-1)*general.lenConFilter + (1:general.lenConFilter);
 
 
-str1 = [str_ref(:)', {[str_ref1 '10.']}];
-% Fig. 10
+str1 = [str_ref(:)', {[str_ref1 '12.']}];
+% Fig. 12
 figure('name','control_filters_from_different_methods')
 hold on
 for kk = 1:3
@@ -415,14 +417,14 @@ text(10,0.3,str1,'BackgroundColor',bgc)
 %%
 % Note ------------------------------------------------------------------ %
 % In this section, the results of the experiments in 
-%   Sec. V-E Comparison between VAST-NF, VAST-BF, and VAST-T
+%   Sec. V-F Comparison between VAST-NF, VAST-BF, and VAST-T
 % are shown.
 %
 % This experiment shows the oAC from
 %  1) Frequency domain method on a higher grid
 %  2) Time domain method
 %  3) Frequency domain method on the DFT grid
-% Fig. 11 will be plotted.
+% Fig. 13 will be plotted.
 % ------------------------------------------------------------------ Note %
 close all
 general.legendnames = {'Freq', 'Time'}';
@@ -479,8 +481,8 @@ for ii = 1:binlength
 end
 
 
-str1 = [str_ref(:)', {[str_ref1 '11.']}];
-% Fig. 11
+str1 = [str_ref(:)', {[str_ref1 '13.']}];
+% Fig. 13
 figure('Name','oAC_different_methods')
 subplot(211)
 plot(ffidx,oac)

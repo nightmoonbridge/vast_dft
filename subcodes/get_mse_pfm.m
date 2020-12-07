@@ -72,7 +72,7 @@ if sridx == 1
     % %%
     % Fig. 5 (a)
     str1 = [str_ref(:)', {[str_ref1 '5 (a).']}];
-    figname = ['exp1_rank_vs_oAC_zone' num2str(sridx) '_at_' num2str(calinfo.tarfreq/1000) 'kHz'];
+    figname = ['exp1: rank vs. oAC zone' num2str(sridx) ' at ' num2str(calinfo.tarfreq/1000) 'kHz'];
     figure('Name', figname)
     plot(Vcan,10*log10(oAC(:,[1,51,lm])))
     xlim([1 16])
@@ -87,7 +87,7 @@ if sridx == 1
     % %%
     % Fig. 5 (b)
     str2 = [str_ref(:)', {[str_ref1 '5 (b).']}];
-    figname = ['exp1_rank_vs_SDE_zone' num2str(sridx) ''];
+    figname = ['exp1: rank vs. SDE zone' num2str(sridx) ''];
     figure('Name', figname)
     plot(Vcan,10*log10(sde(:,[1,51,lm])))
     xlim([1 16])
@@ -103,7 +103,7 @@ if sridx == 1
     % %%
     % Fig. 6
     str3 = [str_ref(:)', {[str_ref1 '6.']}];
-    figname = ['exp1_rank_vs_RE_zone' num2str(sridx) ''];
+    figname = ['exp1: rank vs. RE zone' num2str(sridx) ''];
     figure('Name',figname)
     plot(Vcan,10*log10(re(:,[1,51,lm])))
     xlim([1 16])
@@ -116,9 +116,9 @@ if sridx == 1
     title(figname)
     
     % %%
-    % Fig. 7 (a)
-    str4 = [str_ref(:)', {[str_ref1 '7 (a).']}];
-    figname = ['exp1_mu_vs_oAC_zone' num2str(sridx) ''];
+    % Fig. 8 (a)
+    str4 = [str_ref(:)', {[str_ref1 '8 (a).']}];
+    figname = ['exp1: mu vs. oAC zone' num2str(sridx) ''];
     figure('Name', figname)
     semilogx(mucan,10*log10(oAC([1,2,4,8,16],:)'))
     xlim(10.^[-7 7])
@@ -131,9 +131,9 @@ if sridx == 1
     title(figname)
 
     % %%
-    % Fig. 7 (b)
-    str5 = [str_ref(:)', {[str_ref1 '7 (b).']}];
-    figname = ['exp1_mu_vs_nSDE_zone' num2str(sridx) ''];
+    % Fig. 8 (b)
+    str5 = [str_ref(:)', {[str_ref1 '8 (b).']}];
+    figname = ['exp1: mu vs. nSDE zone' num2str(sridx) ''];
     figure('Name',figname)
     semilogx(mucan,10*log10(nsde([1,2,4,8,16],:)'))
     xlim(10.^[-7 7])
@@ -146,9 +146,9 @@ if sridx == 1
     title(figname)
 
     % %%
-    % Fig. 7 (c)
-    str6 = [str_ref(:)', {[str_ref1 '7 (c).']}];
-    figname = ['exp1_mu_vs_nRE_zone' num2str(sridx) ''];
+    % Fig. 8 (c)
+    str6 = [str_ref(:)', {[str_ref1 '8 (c).']}];
+    figname = ['exp1: mu vs. nRE zone' num2str(sridx) ''];
     figure('Name',figname)
     semilogx(mucan,10*log10(nre([1,2,4,8,16],:)'))
     xlim(10.^[-7 7])
@@ -159,63 +159,6 @@ if sridx == 1
     grid minor
     text(10^(-6.8), -55, str6, 'BackgroundColor', bgc)
     title(figname)
-    
-    
-    
-    % %%
-%     figname = ['exp1_rank_vs_nSDE_zone' num2str(sridx) ''];
-%     figure('Name', figname)
-%     plot(Vcan,10*log10(nsde(:,[1,51,lm])))
-%     xlim([1 16])
-%     ylim([-20 0])
-%     legend({'\mu = 0', '\mu = 1', '\mu = \infty'},'Interpreter','tex')
-%     xlabel('Subspace rank $V$', 'Interpreter', 'latex')
-%     ylabel('nSDE (dB)')
-%     title(figname)
 
-%     % %%
-%     figname = ['exp1_rank_vs_nRE_zone' num2str(sridx) ''];
-%     figure('Name',figname)
-%     plot(Vcan,10*log10(nre(:,[1,51,lm])))
-%     xlim([1 16])
-%     % ylim([-50 -20])
-%     legend({'\mu = 0', '\mu = 1', '\mu = \infty'},'Interpreter','tex')
-%     xlabel('Subspace rank $V$', 'Interpreter', 'latex')
-%     ylabel('nRE (dB)')
-%     title(figname)
-
-
-
-
-%     figname = ['exp1_mu_vs_SDE_zone' num2str(sridx) ''];
-%     figure('Name',figname)
-%     semilogx(mucan,10*log10(sde([1,2,4,8,16],:)'))
-%     % xlim([1 16])
-%     % ylim([2 18])
-%     legend({'V = 1', 'V = 2', 'V = 4', 'V = 8', 'V = 16'})
-%     xlabel('\mu', 'Interpreter', 'tex')
-%     ylabel('SDE (dB)')
-%     title(figname)
-% 
-%     % %%
-%     figname = ['exp1_rank_vs_RE_zone' num2str(sridx) ''];
-%     figure('Name',figname)
-%     plot(Vcan,10*log10(re(:,[1,51,lm])))
-%     xlim([1 16])
-%     % ylim([-50 -20])
-%     legend({'\mu = 0', '\mu = 1', '\mu = \infty'},'Interpreter','tex')
-%     xlabel('Subspace rank $V$', 'Interpreter', 'latex')
-%     ylabel('RE (dB)')
-%     title(figname)
-% 
-%     figname = ['exp1_mu_vs_RE_zone' num2str(sridx) ''];
-%     figure('Name',figname)
-%     semilogx(mucan,10*log10(re([1,2,4,8,16],:)'))
-%     % xlim([1 16])
-%     % ylim([-50 -20])
-%     legend({'V = 1', 'V = 2', 'V = 4', 'V = 8', 'V = 16'})
-%     xlabel('\mu', 'Interpreter', 'tex')
-%     ylabel('RE (dB)')
-%     title(figname)
 end
 end
