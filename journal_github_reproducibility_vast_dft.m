@@ -5,8 +5,8 @@
 %                Variable Span Trade-Off Filters in the DFT-domain
 % Journal:       IEEE/ACM Transactions on Audio, Speech, 
 %                and Language Processing, submitted, 2020.
-% Authors:       Taewoong Lee, Liming Shi, Jesper Kjær Nielsen, and 
-%                Mads Græsbøll Christensen
+% Authors:       Taewoong Lee, Liming Shi, Jesper KjÃ¦r Nielsen, and 
+%                Mads GrÃ¦sbÃ¸ll Christensen
 % Affiliation:   Audio Analysis Lab., CREATE, 
 %                Aalborg University, 9000 Aalborg, Denmark
 % ----------------------------------------------------------------------- %
@@ -20,7 +20,7 @@
 %  tlee at create.aau.dk
 %  albert.taewoong.lee at gmail.com
 %
-% Modified date: 25/Apr-2020
+% Modified date: 25/Apr-2020, 07/Dec-2020
 % MATLAB version: MATLAB 9.6.0.1099231 (R2019a) Update 1
 %
 %% Initialization
