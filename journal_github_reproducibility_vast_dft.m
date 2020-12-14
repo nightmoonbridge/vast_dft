@@ -4,13 +4,16 @@
 % Title:         Fast Generation of Sound Zones Using 
 %                Variable Span Trade-Off Filters in the DFT-domain
 % Journal:       IEEE/ACM Transactions on Audio, Speech, 
-%                and Language Processing, submitted, 2020.
+%                and Language Processing, accepted for publication, 2020.
+%                https://ieeexplore.ieee.org/document/9281345
 % Authors:       Taewoong Lee, Liming Shi, Jesper Kjær Nielsen, and 
 %                Mads Græsbøll Christensen
 % Affiliation:   Audio Analysis Lab., CREATE, 
 %                Aalborg University, 9000 Aalborg, Denmark
 % ----------------------------------------------------------------------- %
 %
+%
+% Please run the code section by section.
 %
 % The latest code can be found from the following link:
 % https://github.com/actlee/vast_dft
@@ -19,9 +22,17 @@
 % please send me an e-mail to
 %  tlee at create.aau.dk
 %  albert.taewoong.lee at gmail.com
+%  taewoong.lee at ieee.org
 %
-% Modified date: 25/Apr-2020, 07/Dec-2020
+% Modified date: 25/Apr-2020
 % MATLAB version: MATLAB 9.6.0.1099231 (R2019a) Update 1
+%
+%
+%
+% When running this code on codeocean, you might see two warning messages on line 151.
+% Please try running this code on another system or your PC.
+% If you see these warning messages, please send me an email.
+%
 %
 %% Initialization
 close all;clear;clc
