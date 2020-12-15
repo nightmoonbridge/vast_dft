@@ -13,7 +13,7 @@
 % ----------------------------------------------------------------------- %
 %
 %
-% Please run the code section by section.
+% Please run each section individually.
 %
 % The latest code can be found from the following link:
 % https://github.com/actlee/vast_dft
@@ -21,10 +21,9 @@
 % If you have any comments or questions regarding the code,
 % please send me an e-mail to
 %  tlee at create.aau.dk
-%  albert.taewoong.lee at gmail.com
 %  taewoong.lee at ieee.org
 %
-% Modified date: 25/Apr-2020
+% Modified date: 25/Apr-2020, 04/Dec-2020
 % MATLAB version: MATLAB 9.6.0.1099231 (R2019a) Update 1
 %
 %
