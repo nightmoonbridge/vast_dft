@@ -16,7 +16,7 @@
 % Please run each section individually.
 %
 % The latest code can be found from the following link:
-% https://github.com/actlee/vast_dft
+% https://github.com/nightmoonbridge/vast_dft
 % 
 % If you have any comments or questions regarding the code,
 % please send me an e-mail to
